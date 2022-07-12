@@ -3,17 +3,17 @@
     flex-direction: column;
 }
 
-.container {
+.loginTitle {
     height: 80vmin;
     width: 100vmin;
 }
 
-.container--habit {
+.loginTitle--habit {
     background: #4150D2;
     border-radius: 1px;
 }
 
-.h3Habit {
+.loginTitle__h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
@@ -23,7 +23,7 @@
     margin-left: 5vh;
 }
 
-.pMain--habit{
+.loginTitle__p--primary{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -33,7 +33,7 @@
     margin-left: 5vh;
 }
 
-.pSecondary--habit {
+.loginTitle__p--secondary {
     font-family: 'Inter', sans-serif;
     color: #E9ECEF;
     font-weight: 400;
@@ -42,11 +42,11 @@
     margin-left: 5vh;
 }
 
-.container--login {
+.loginForm {
     background: #FFFFFF;
 }
 
-.h3Login {
+.loginForm__h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -56,7 +56,7 @@
     margin-left: 5vh;
 }
 
-.label {
+.loginForm__label {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 12px;
@@ -64,7 +64,7 @@
     margin-left: 5vh;
 }
 
-.input {
+.loginForm__input {
     display: block;
     background: #F8F9FA;
     width: 230px;
@@ -76,13 +76,13 @@
     padding: 9px 18px;
 }
 
-.input::placeholder {
+.loginForm__input::placeholder {
     font-family: 'Inter', sans-serif;
     color: #343A40;
     font-weight: 600;
 }
 
-.btn--entrar {
+.loginForm__button--submit {
     width: 270px;
     height: 25px;
     margin-left: 5vh;
