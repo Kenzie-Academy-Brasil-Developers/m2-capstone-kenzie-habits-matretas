@@ -39,7 +39,7 @@
   }
 }
 
-.modal__tittle {
+.modal__title {
   width: inherit;
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@
   color: rgba(var(--color-grey1), 1);
 }
 
-.modal__tittle > .modal__buttonClose {
+.modal__tittle > .modal__button--close {
   background: none;
   border: none;
   font-style: var(--font-heading);
@@ -92,7 +92,7 @@
   outline: 0.125rem solid rgba(var(--color-brand1), 1);
 }
 
-.modal__form > .modal__buttonSave {
+.modal__form > .modal__button--save {
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 0.8rem;
