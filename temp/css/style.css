@@ -45,14 +45,14 @@
   margin-bottom: 2rem;
 }
 
-.modal__tittle > h2 {
+.modal__title > h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: rgba(var(--color-grey1), 1);
 }
 
 
-.modal__tittle > .modal__button--close {
+.modal__title > .modal__button--close {
   background: none;
   border: none;
   font-style: var(--font-heading);
@@ -127,9 +127,14 @@
   padding: 0.5rem 0;
 }
 
-.modal__form > .modal__buttonInsert {
+.modal__form > .modal__button--insert {
+  background-color: rgba(var(--color-brand1), 1);
+  color: rgba(var(--color-white), 1);
+  padding: 0.3rem;
+  border-radius: 0.25rem;
 
 }
+
 .modal__form > .modal__button--save {
 
   font-size: 1rem;
