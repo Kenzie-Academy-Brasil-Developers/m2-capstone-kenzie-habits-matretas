@@ -1,0 +1,142 @@
+
+/* ----- MODAL CREATE HABIT ----- */
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(var(--color-black), 0.5);
+  font-family: var(--font-base);
+}
+
+.modal > .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: inherit;
+  padding: 0.3rem;
+  margin-top: 3rem;
+}
+
+.modal__inner {
+  width: 100%;
+  background-color: rgba(var(--color-white), 1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  position: relative;
+}
+@media screen and (min-width: 520px) {
+  .modal__inner {
+    width: 30rem;
+  }
+}
+
+.modal__tittle {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal__tittle > h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(var(--color-grey1), 1);
+}
+
+.modal__tittle > .modal__buttonClose {
+  background: none;
+  border: none;
+  font-style: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(var(--color-grey3), 1);
+  cursor: pointer;
+}
+
+.modal__form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__form > label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(var(--color-grey2), 1);
+  margin-bottom: 0.5rem;
+}
+
+.modal__form > input {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(var(--color-grey2), 1);
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1.4rem;
+  background: rgba(var(--color-grey5), 1);
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.modal__form > input:focus {
+  outline: 0.125rem solid rgba(var(--color-brand1), 1);
+}
+
+.modal__form > textarea {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(var(--color-grey2), 1);
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1.4rem;
+  background: rgba(var(--color-grey5), 1);
+  border: none;
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+.modal__form > textarea:focus {
+  outline: 0.125rem solid rgba(var(--color-brand1), 1);
+}
+
+.modal__form > select {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(var(--color-grey2), 1);
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1.4rem;
+  background: rgba(var(--color-grey5), 1);
+  border: none;
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+.modal__form > select:focus {
+  outline: 0.125rem solid rgba(var(--color-brand1), 1);
+}
+
+.modal__form > option {
+  padding: 0.5rem 0;
+}
+
+.modal__form > .modal__buttonInsert {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  color: rgba(var(--color-white), 1);
+  background-color: rgba(var(--color-brand1), 1);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */

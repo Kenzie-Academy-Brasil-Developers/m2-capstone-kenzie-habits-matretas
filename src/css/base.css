@@ -1,0 +1,27 @@
+
+:root {
+
+  --color-black: 0, 0, 0;
+  --color-white: 255, 255, 255;
+
+  --color-brand1: 65, 90, 243;
+  --color-brand2: 65, 80, 210;
+  --color-brand3: 215, 228, 251;
+
+  --color-primaryDisable: 160, 173, 249;
+
+  --color-grey1: 33, 37, 41;
+  --color-grey2: 52, 58, 64;
+  --color-grey3: 173, 181, 189;
+  --color-grey4: 233, 236, 239;
+  --color-grey5: 241, 243, 245;
+  --color-grey6: 248, 249, 250;
+
+  --color-success: 86, 207, 142;
+  --color-error1: 230, 68, 69;
+  --color-error2: 240, 56, 57;
+
+  --font-base: 'Inter', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+  
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/base.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="modal">
+    <div class="container">
+      <div class="modal__inner">
+
+        <div class="modal__tittle">
+          <h2>Criar hábito</h2>
+          <button type="button" class="modal__buttonClose">X</button>
+        </div>
+
+        <form class="modal__form">
+          <label for="tittle">Título</label>
+          <input type="text" name="tittle" id="tittle" placeholder="Digitar título">
+
+          <label for="description">Descrição</label>
+          <textarea name="description" id="description" cols="30" rows="3" placeholder="Digitar descrição"></textarea>
+
+          <label for="category">Categoria</label>
+          <select name="category" id="category">
+            <option value="">Selecionar categoria</option>
+            <option value="house">Casa</option>
+            <option value="study">Estudo</option>
+            <option value="leisure">Lazer</option>
+            <option value="work">Trabalho</option>
+            <option value="health">Saúde</option>
+          </select>
+
+          <button type="button" class="modal__buttonInsert">Inserir</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
