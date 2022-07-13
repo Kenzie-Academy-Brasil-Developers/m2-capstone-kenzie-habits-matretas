@@ -19,7 +19,7 @@ class Loginpage {
             await Login.logar(user, password)
         
             if (this.usr_name && this.token) {
-                window.location.href = `${this.filteredUrl}../src/views/homePage.views.html`
+                window.location.href = `${this.filteredUrl}src/views/homePage.views.html`
             }
 
         })
