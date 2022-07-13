@@ -87,6 +87,14 @@ class Api {
         .catch(err => console.log(err))
     }
 
+    static async completeHabit(habit_id) {
+
+        return await fetch(`${this.base_url}/api/habits/complete/${habit_id}`, {
+            method: "PATCH",
+            headers: {
+                "Authorization": `Bearer ${this.token}`
+            }
+
     static async createHabit(data) {
 
         return await fetch(`${this.base_url}/api/habits`, {
@@ -96,6 +104,7 @@ class Api {
                 "Authorization": `Bearer ${this.token}`
             },
             body: JSON.parse(data)
+
         })
         .then(res => res.json())
         .then(res => res)
