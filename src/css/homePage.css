@@ -154,22 +154,16 @@ header{
 }
 .tableAffairs {
     border: 2px solid #dfdbdb;
-<<<<<<< HEAD
-    width: 100%;
-     
-=======
 
-    width: 84.65%;
->>>>>>> fbcacdf5094fcd0a8d966ce95200322f9be3c3f8
-    
+    width: 100%;
 }
- 
+
 table,th,td{
     border: 1px solid  #dfdbdb;
     min-width:79px;
     width: auto;
     
-     
+
     height: 49px;
 }
 
@@ -243,4 +237,44 @@ table,th,td{
 }
 
 /* ----------section 2 Affairs--------- */
- 
+
+#navMenu__menu {
+    display: none;
+}
+
+#navMenu__menu.active {
+    display: block;
+    position: absolute;
+    left: 225px;
+    top: 71px;
+    height: 100px;
+    width: 90px;
+    background: rgba( 255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.navMenu__ul {
+    display: none;
+}
+
+#navMenu__menu.active .navMenu__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.navMenu__button--editar {
+    margin-bottom: 18px;
+}
+
+.navMenu__button {
+    border: none;
+    background-color: #f39741;
+    width: 60px;
+    height: 25px;
+    color: #415AF3;
+    border-radius: 4px
+}
