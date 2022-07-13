@@ -262,6 +262,70 @@ class ComponentesDom {
             document.body.removeChild(modal)
         })
     }
+
+    static modalEditProfile(){
+        const divModalProfile = document.createElement('div')
+        const divContainerProfile = document.createElement('div')
+        const divInnerProfile = document.createElement('div')
+        const divTitleProfile = document.createElement('div')
+
+        divModalProfile.setAttribute('id', 'modal')
+        divContainerProfile.classList.add('container')
+        divInnerProfile.classList.add('modal__inner')
+        divTitleProfile.classList.add('modal__title')
+
+        const h2Profile = document.createElement('h2')
+        const buttonProfile = document.createElement('button')
+
+        h2Profile.classList.add('modal__title--h2')
+        buttonProfile.setAttribute('id', 'modal__button--close')
+        h2Profile.innerText = 'Editar Perfil'
+        buttonProfile.type = 'Button'
+        buttonProfile.innerText = 'X'
+
+        const formProfile = document.createElement('form')
+        const labelProfileName = document.createElement('label')
+        const inputProfileName = document.createElement('input')
+        const labelProfileImg = document.createElement('label')
+        const inputProfileImg = document.createElement('input')
+        const buttonFormProfile = document.createElement('button')
+
+        formProfile.classList.add('modal__form')
+        labelProfileName.innerText = 'Nome'
+        inputProfileName.setAttribute('id', 'name')
+        inputProfileName.type = 'text'
+
+        labelProfileImg.innerText = 'URL da imagem do perfil'
+        inputProfileImg.setAttribute('id', 'imageUrl')
+        inputProfileImg.type = 'url'
+
+        buttonFormProfile.type = 'button'
+        buttonFormProfile.classList.add('modal__button--save')
+        buttonFormProfile.innerText = 'Salvar alterações'
+
+        divModalProfile.append(divContainerProfile)
+        divContainerProfile.append(divInnerProfile)
+        divInnerProfile.append(divTitleProfile, formProfile)
+        divTitleProfile.append(h2Profile, buttonProfile)
+        formProfile.append(labelProfileName, inputProfileName, labelProfileImg, inputProfileImg, buttonFormProfile)
+        document.body.appendChild(divModalProfile)
+
+        //CODIGO PARA ABRIR E FECHAR MODAL DE EDITAR PERFIL
+
+        const btnAbrirModal = document.getElementById("navMenu__button--editar")
+
+        function chamarModalEditar (){
+            const modalEditar = document.getElementById("modal")
+            modalEditar.classList.toggle("active")
+        }
+
+        btnAbrirModal.addEventListener("click", chamarModalEditar)
+
+        const btnFecharModal = document.getElementById("modal__button--close")
+
+        btnFecharModal.addEventListener("click", chamarModalEditar)
+
+        }
 }
 
 export default ComponentesDom

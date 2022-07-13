@@ -1,6 +1,8 @@
 import Pages from "../controller/Pages.controller.js"
 import ComponentesDom from "../models/ComponentesDom.models.js"
 
+//CODIGO PARA ABRIR O MENU DE EDITAR E SAIR
+
 const btnNavMenu = document.getElementById("img__user")
 
 function chamarMenu (){
@@ -9,6 +11,8 @@ function chamarMenu (){
 }
 
 btnNavMenu.addEventListener("click", chamarMenu)
+
+//FIM DO CODIGO MENU
 
 
 await Pages.renderAllHabits()
@@ -60,3 +64,4 @@ class homePage {
 }
 
 homePage.main()
+ComponentesDom.modalEditProfile()
