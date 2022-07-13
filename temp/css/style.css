@@ -10,8 +10,12 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(var(--color-black), 0.5);
-  font-family: var(--font-base);
+
+  /* background-color: rgba(var(--color-black), 1); */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* font-family: var(--font-base); */
+  font-family: 'Inter';
+
 }
 
 #modal > .container {
