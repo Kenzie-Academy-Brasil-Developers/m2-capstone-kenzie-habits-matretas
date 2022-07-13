@@ -21,7 +21,6 @@ class Loginpage {
             if (this.usr_name && this.token) {
                 window.location.href = `${this.filteredUrl}/src/views/homePage.views.html`
             }
-            console.log("alo")
 
         })
     }
