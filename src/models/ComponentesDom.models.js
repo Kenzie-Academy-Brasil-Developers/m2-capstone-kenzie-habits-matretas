@@ -173,6 +173,82 @@ class ComponentesDom {
 
         })
     }
+
+    static modalCreateHabit() {
+        const divModal = document.createElement('div')
+        divModal.className = "modal"
+        const divContainer = document.createElement('div')
+        divContainer.className = "container"
+        const divModalInner = document.createElement('div')
+        divModalInner.className = "modal__inner"
+
+        const divModalTitle = document.createElement('div')
+        divModalTitle.className = "modal__title"
+        const modalTitle = document.createElement('h2')
+        modalTitle.innerText = "Criar hábito"
+        const modalCloseBtn = document.createElement('button')
+        modalCloseBtn.innerText = "X"
+        modalCloseBtn.className = "modal__button--close"
+
+        divModalTitle.append(modalTitle, modalCloseBtn)
+
+        const modalForm = document.createElement('form')
+        modalForm.className = "modal__form"
+        const modalFormLabelTitle = document.createElement('label')
+        modalFormLabelTitle.for = "title"
+        modalFormLabelTitle.innerText = "Título"
+        const modalFormInputTitle = document.createElement('input')
+        modalFormInputTitle.type = "text"
+        modalFormInputTitle.name = "title"
+        modalFormInputTitle.id = "title"
+        modalFormInputTitle.placeholder = "Digitar título"
+
+        const modalFormLabelCategory = document.createElement('label')
+        modalFormLabelCategory.for = "category"
+        modalFormLabelCategory.innerText = "Categoria"
+        const modalFormCategorySelect = document.createElement('select')
+        modalFormCategorySelect.name = "category"
+        modalFormCategorySelect.id = "category"
+        const optionDefault = document.createElement('option')
+        optionDefault.value = ""
+        optionDefault.innerText = "Selecionar categoria"
+        const optionHouse = document.createElement('option')
+        optionHouse.value = "house"
+        optionHouse.innerText = "Casa"
+        const optionStudy = document.createElement('option')
+        optionStudy.value = "study"
+        optionStudy.innerText = "Estudo"
+        const optionLeisure = document.createElement('option')
+        optionLeisure.value = "leisure"
+        optionLeisure.innerText = "Lazer"
+        const optionWork = document.createElement("option")
+        optionWork.value = "work"
+        optionWork.innerText = "Trabalho"
+        const optionHealth = document.createElement('option')
+        optionHealth.value = "health"
+        optionHealth.innerText = "Saúde"
+
+        modalFormCategorySelect.append(optionDefault, optionHouse, optionStudy, optionLeisure, optionWork, optionHealth)
+
+        const modalButtonsDelete = document.createElement('button')
+        modalButtonsDelete.type = 'button'
+        modalButtonsDelete.className = "modal__button modal__button--insert"
+        modalButtonsDelete.innerText = "Inserir"
+
+        modalForm.append(modalFormLabelTitle, modalFormInputTitle, modalFormLabelCategory, modalFormCategorySelect, modalButtonsDelete)
+
+
+        divModalInner.append(divModalTitle, modalForm)
+        divContainer.append(divModalInner)
+        divModal.append(divContainer)
+
+        document.body.appendChild(divModal)
+
+        const modalClose = document.querySelector('.modal__button--close').addEventListener('click', (e) => {
+            const modal = document.querySelector('.modal')
+            document.body.removeChild(modal)
+        })
+    }
 }
 
 export default ComponentesDom
