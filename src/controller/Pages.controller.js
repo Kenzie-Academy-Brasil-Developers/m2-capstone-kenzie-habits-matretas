@@ -1,7 +1,7 @@
 import Api from "./Api.controller.js"
 
 class Pages {
-    static async renderHabits() {
+    static async renderAllHabits() {
         const response = await Api.readAllHabits()
         response.forEach((habit) => {
             const newTr = document.createElement('tr')
@@ -17,6 +17,7 @@ class Pages {
             const edit = document.createElement('td')
             const editBtn = document.createElement('button')
             editBtn.innerText = "..."
+            editBtn.id = habit.habit_id
 
             edit.appendChild(editBtn)
 
@@ -26,6 +27,10 @@ class Pages {
             tBody.appendChild(newTr)
         })
     }
+
+    
 }
 
 export default Pages
+
+

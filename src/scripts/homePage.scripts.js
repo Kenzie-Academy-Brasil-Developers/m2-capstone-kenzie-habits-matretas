@@ -9,6 +9,7 @@ function chamarMenu (){
 
 btnNavMenu.addEventListener("click", chamarMenu)
 
+
 Pages.renderHabits()
 
 class homePage { 
@@ -45,3 +46,6 @@ class homePage {
 }
 
 homePage.main()
+
+Pages.renderAllHabits()
+
