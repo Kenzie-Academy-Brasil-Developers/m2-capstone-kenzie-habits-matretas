@@ -86,6 +86,21 @@ class Api {
         .then(res => res)
         .catch(err => console.log(err))
     }
+
+    static async createHabit(data) {
+
+        return await fetch(`${this.base_url}/api/habits`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.token}`
+            },
+            body: JSON.parse(data)
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+    }
 }
 
 export default Api
