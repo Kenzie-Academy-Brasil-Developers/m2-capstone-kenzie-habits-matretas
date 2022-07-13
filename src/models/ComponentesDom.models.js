@@ -153,6 +153,60 @@ class ComponentesDom {
             document.body.removeChild(modal)
         })
     }
+
+    static modalEditProfile() {
+        const divModal = document.createElement('div')
+        divModal.className = "modal"
+        const divContainer = document.createElement('div')
+        divContainer.className = "container"
+        const divModalInner = document.createElement('div')
+        divModalInner.className = "modal__inner"
+
+        const divModalTitle = document.createElement('div')
+        divModalTitle.className = "modal__title"
+        const modalTitle = document.createElement('h2')
+        modalTitle.innerText = "Editar Perfil"
+        const modalCloseBtn = document.createElement('button')
+        modalCloseBtn.innerText = "X"
+        modalCloseBtn.className = "modal__button--close"
+
+        divModalTitle.append(modalTitle, modalCloseBtn)
+
+        const modalForm = document.createElement('form')
+        modalForm.className = "modal__form"
+        const modalFormLabelName = document.createElement('label')
+        modalFormLabelName.for = "name"
+        modalFormLabelName.innerText = "Nome"
+        const modalFormInputName = document.createElement('input')
+        modalFormInputName.type = "text"
+        modalFormInputName.name = "name"
+        modalFormInputName.id = "name"
+
+        const modalFormLabelImageUrl = document.createElement('label')
+        modalFormLabelImageUrl.for = "imageUrl"
+        modalFormLabelImageUrl.innerText = "URL da imagem do perfil"
+        const modalFormInputImageUrl = document.createElement('input')
+        modalFormInputImageUrl.name = "imageUrl"
+        modalFormInputImageUrl.id = "imageUrl"
+
+        const modalButtonsSave = document.createElement('button')
+        modalButtonsSave.type = 'button'
+        modalButtonsSave.className = "modal__button--save"
+        modalButtonsSave.innerText = "Salvar alterações"
+
+        modalForm.append(modalFormLabelName, modalFormInputName, modalFormInputImageUrl, modalFormInputImageUrl, modalButtonsSave)
+
+        divModalInner.append(divModalTitle, modalForm)
+        divContainer.append(divModalInner)
+        divModal.append(divContainer)
+
+        document.body.appendChild(divModal)
+
+        const modalClose = document.querySelector('.modal__button--close').addEventListener('click', (e) => {
+            const modal = document.querySelector('.modal')
+            document.body.removeChild(modal)
+        })
+    }
 }
 
 export default ComponentesDom
