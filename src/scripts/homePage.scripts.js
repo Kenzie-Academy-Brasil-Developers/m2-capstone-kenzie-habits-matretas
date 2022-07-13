@@ -1,4 +1,5 @@
 import Pages from "../controller/Pages.controller.js"
+import ComponentesDom from "../models/ComponentesDom.models.js"
 
 const btnNavMenu = document.getElementById("img__user")
 
@@ -10,7 +11,18 @@ function chamarMenu (){
 btnNavMenu.addEventListener("click", chamarMenu)
 
 
-Pages.renderHabits()
+Pages.renderAllHabits()
+
+const editBtns = document.getElementsByClassName("tableAffairs__edit--button")
+
+for(let i = 0; i < editBtns.length; i++) {
+    editBtns[i].addEventListener('click', (e) => {
+        ComponentesDom.modalEdit()
+    })
+}
+
+
+
 
 class homePage { 
 
@@ -48,4 +60,3 @@ class homePage {
 homePage.main()
 
 Pages.renderAllHabits()
-
