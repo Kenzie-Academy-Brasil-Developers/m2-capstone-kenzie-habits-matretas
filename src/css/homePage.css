@@ -71,7 +71,9 @@ header{
     font-family: 'Inter';
     font-weight: 600;
     color: white;
-    margin: 34px 32px
+    margin: 34px 10px;
+    text-align: left;
+    
 }
 
 
@@ -123,6 +125,7 @@ header{
     font-style: normal;
     font-weight: bold;
     line-height: 32px;
+    background-color: transparent;
 }
 
 .navigationButton--criar{
@@ -143,7 +146,7 @@ header{
 .containerAffairs{
     margin-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100vw;
 
@@ -151,7 +154,8 @@ header{
 }
 .tableAffairs {
     border: 2px solid #dfdbdb;
-    width: 90%;
+    width: 84.65%;
+     
     
 }
  
@@ -167,7 +171,7 @@ table,th,td{
 .tableAffairs__tr {
     /* border: 2px solid black; */
 
-     width: 80px;
+    width: 80px;
     /*height: 60px; */
     font-family: 'Inter';
     font-weight: 500;
@@ -187,6 +191,7 @@ table,th,td{
 
 
 .tableAffairs__tr--data{
+    /* position: absolute; */
     font-family: 'Inter';
     font-weight: 500 ;
 }
@@ -223,4 +228,12 @@ table,th,td{
     margin: 0px 30px;
 }
 
+/* ----------section 2 Affairs--------- */
+/* ----------POSICAO DO 'EDITAR' NO HTML DA HOME-PAGE---------- */
+.absolutPosition{
+    width: 86.17px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
 /* ----------section 2 Affairs--------- */
