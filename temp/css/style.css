@@ -1,11 +1,12 @@
 .modal {
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(var(--color-black), 0.5);
+  /* background-color: rgba(var(--color-black), 1); */
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: var(--font-base);
 }
 
@@ -16,11 +17,13 @@
   height: inherit;
   padding: 0.3rem;
   margin-top: 3rem;
+  /* background-color: rgba(255, 255, 255, 1); */
 }
 
 .modal__inner {
   width: 100%;
   background-color: rgba(var(--color-white), 1);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
