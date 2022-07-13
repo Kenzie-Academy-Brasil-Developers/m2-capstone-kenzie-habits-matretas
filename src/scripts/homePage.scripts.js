@@ -11,13 +11,16 @@ function chamarMenu (){
 btnNavMenu.addEventListener("click", chamarMenu)
 
 
-Pages.renderAllHabits()
+await Pages.renderAllHabits()
 
 const editBtns = document.getElementsByClassName("tableAffairs__edit--button")
+console.log(editBtns)
 
 for(let i = 0; i < editBtns.length; i++) {
     editBtns[i].addEventListener('click', (e) => {
-        ComponentesDom.modalEdit()
+        let id = e.target.id
+        console.log(id)
+        ComponentesDom.modalEdit(id)
     })
 }
 

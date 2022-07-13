@@ -1,7 +1,11 @@
+import Api from "../controller/Api.controller.js"
+
 class ComponentesDom {
-    static modalEdit() {
+    static modalEdit(id) {
+        
         const divModal = document.createElement('div')
         divModal.className = "modal"
+        divModal.id = id
         const divContainer = document.createElement('div')
         divContainer.className = "container"
         const divModalInner = document.createElement('div')
@@ -95,12 +99,14 @@ class ComponentesDom {
         })
 
         const modalButtonDelete = document.querySelector('.modal__button--delete').addEventListener('click', (e) => {
-            this.modalConfirmExclusion()
+            console.log(id)
+            this.modalConfirmExclusion(id)
         })
 
     }
 
-    static modalConfirmExclusion() {
+    static modalConfirmExclusion(id) {
+        
         const divModal = document.createElement('div')
         divModal.className = "modal"
         const divContainer = document.createElement('div')
@@ -148,9 +154,23 @@ class ComponentesDom {
 
         document.body.appendChild(divModal)
 
-        const modalClose = document.querySelector('.modal__button--close').addEventListener('click', (e) => {
-            const modal = document.querySelector('.modal')
+        const modalClose = document.querySelector('.modal__button--cancel').addEventListener('click', (e) => {
+            console.log(e.target.parentNode.parentNode.parentNode.parentNode)
+            const modal = e.target.parentNode.parentNode.parentNode.parentNode
+
             document.body.removeChild(modal)
+
+        })
+
+        const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', (e) => {
+
+            
+            Api.deleteHabit(id)
+
+            const modal = e.target.parentNode.parentNode.parentNode.parentNode
+
+            document.body.removeChild(modal)
+
         })
     }
 }
