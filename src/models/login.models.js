@@ -1,4 +1,4 @@
-import RequisicaoLogin from "../controller/requisicao.login.controller.js"
+import Api from "../controller/Api.controller.js";
 
 class Login {
     static async logar (email, password) {
@@ -7,7 +7,7 @@ class Login {
             email,
             password
         }
-        await RequisicaoLogin.loginUsuario(dados)
+        await Api.loginUsuario(dados)
         
     }
 }

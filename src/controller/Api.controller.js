@@ -1,4 +1,4 @@
-class RequisicaoLogin {
+class Api {
     static base_url = "https://habits-kenzie.herokuapp.com"
     static token = JSON.parse(localStorage.getItem("@kenzie-habits:token"))
 
@@ -30,4 +30,4 @@ class RequisicaoLogin {
     }
 }
 
-export default RequisicaoLogin
+export default Api
