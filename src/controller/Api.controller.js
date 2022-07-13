@@ -58,6 +58,19 @@ class Api {
         .catch(err => console.log(err))
 
     }
+
+    static async deleteHabit(habit_id) {
+        return await fetch(`https://habits-kenzie.herokuapp.com/api/habits/${habit_id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.token}`
+            }
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+    }
 }
 
 export default Api
