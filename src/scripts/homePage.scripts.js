@@ -1,3 +1,5 @@
+import Pages from "../controller/Pages.controller.js"
+
 const btnNavMenu = document.getElementById("img__user")
 
 function chamarMenu (){
@@ -6,3 +8,5 @@ function chamarMenu (){
 }
 
 btnNavMenu.addEventListener("click", chamarMenu)
+
+Pages.renderHabits()
