@@ -14,7 +14,6 @@ btnNavMenu.addEventListener("click", chamarMenu)
 await Pages.renderAllHabits()
 
 const editBtns = document.getElementsByClassName("tableAffairs__edit--button")
-console.log(editBtns)
 
 for(let i = 0; i < editBtns.length; i++) {
     editBtns[i].addEventListener('click', (e) => {

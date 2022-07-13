@@ -3,6 +3,8 @@ import Api from "./Api.controller.js"
 class Pages {
     static async renderAllHabits() {
         const response = await Api.readAllHabits()
+        const tBody = document.querySelector('tbody')
+        tBody.innerHTML = ""
         response.forEach((habit) => {
             const newTr = document.createElement('tr')
             newTr.className = "tableAffairs__tr--data"
@@ -27,7 +29,7 @@ class Pages {
 
             newTr.append(status, title, edit)
 
-            const tBody = document.querySelector('tbody')
+            
             tBody.appendChild(newTr)
         })
     }

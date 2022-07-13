@@ -1,8 +1,9 @@
 import Api from "../controller/Api.controller.js"
+import Pages from "../controller/Pages.controller.js"
 
 class ComponentesDom {
-    static modalEdit(id) {
-        
+    static async modalEdit(id) {
+
         const divModal = document.createElement('div')
         divModal.className = "modal"
         divModal.id = id
@@ -105,8 +106,8 @@ class ComponentesDom {
 
     }
 
-    static modalConfirmExclusion(id) {
-        
+    static async modalConfirmExclusion(id) {
+
         const divModal = document.createElement('div')
         divModal.className = "modal"
         const divContainer = document.createElement('div')
@@ -164,12 +165,24 @@ class ComponentesDom {
 
         const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', (e) => {
 
-            
             Api.deleteHabit(id)
 
-            const modal = e.target.parentNode.parentNode.parentNode.parentNode
+            let modal = e.target.parentNode.parentNode.parentNode.parentNode
 
             document.body.removeChild(modal)
+
+            modal = document.querySelector('.modal')
+
+            document.body.removeChild(modal)
+
+
+            Pages.renderAllHabits()
+            location.reload()
+
+
+
+
+
 
         })
     }
