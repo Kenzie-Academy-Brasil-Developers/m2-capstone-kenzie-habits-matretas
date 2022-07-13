@@ -71,6 +71,21 @@ class Api {
         .then(res => res)
         .catch(err => console.log(err))
     }
+
+    static async updateProfile(newImg) {
+
+        return await fetch(`${this.base_url}/api/user/profile`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.token}`
+            },
+            body: JSON.parse(newImg)
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+    }
 }
 
 export default Api
