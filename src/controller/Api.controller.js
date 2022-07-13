@@ -94,6 +94,17 @@ class Api {
             headers: {
                 "Authorization": `Bearer ${this.token}`
             }
+
+    static async createHabit(data) {
+
+        return await fetch(`${this.base_url}/api/habits`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.token}`
+            },
+            body: JSON.parse(data)
+
         })
         .then(res => res.json())
         .then(res => res)
