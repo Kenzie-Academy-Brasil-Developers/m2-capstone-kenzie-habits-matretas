@@ -154,7 +154,7 @@ header{
 }
 .tableAffairs {
     border: 2px solid #dfdbdb;
-    width: 84.65%;
+    width: 100%;
      
     
 }
@@ -181,7 +181,10 @@ table,th,td{
     /* padding:14px 12px; */
 
 }
+ 
+
 .tableAffairs--title{
+    text-align: left;
     width: 150px;
 }
 
@@ -211,10 +214,12 @@ table,th,td{
  
 
 .tableAffairs__edit--button{
+     
     border: none;
     font-size: 32px;
     margin: 8px 23px;
     background-color: #FFFFFF;
+    color: #A1A1A1;
 }
 
 .ex{
@@ -229,11 +234,4 @@ table,th,td{
 }
 
 /* ----------section 2 Affairs--------- */
-/* ----------POSICAO DO 'EDITAR' NO HTML DA HOME-PAGE---------- */
-.absolutPosition{
-    width: 86.17px;
-    position: absolute;
-    right: 0;
-    background-color: white;
-}
-/* ----------section 2 Affairs--------- */
+ 
