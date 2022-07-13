@@ -29,16 +29,34 @@ class Api {
         .catch(err => console.log(err))
     }
 
+
+    static async updateHabit(newData, habit_id) {
+
+        return await fetch(`${this.base_url}/api/habits/${habit_id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.token}`
+            },
+            body: JSON.parse(newData)
+            
+            })
+            .then(res => res.json())
+            .catch(err => err)
+    } 
+
     static async readAllHabits() {
 
         return await fetch(`${this.base_url}/api/habits`, {
             headers: {
                 "Authorization": `Bearer ${this.token}`
             }
+
         })
         .then(res => res.json())
         .then(res => res)
         .catch(err => console.log(err))
+
     }
 }
 
