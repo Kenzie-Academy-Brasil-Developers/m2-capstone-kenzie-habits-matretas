@@ -86,6 +86,19 @@ class Api {
         .then(res => res)
         .catch(err => console.log(err))
     }
+
+    static async completeHabit(habit_id) {
+
+        return await fetch(`${this.base_url}/api/habits/complete/${habit_id}`, {
+            method: "PATCH",
+            headers: {
+                "Authorization": `Bearer ${this.token}`
+            }
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+    }
 }
 
 export default Api
