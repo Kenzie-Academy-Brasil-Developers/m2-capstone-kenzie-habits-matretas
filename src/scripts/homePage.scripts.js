@@ -19,8 +19,3 @@ for(let i = 0; i < editBtns.length; i++) {
         ComponentesDom.modalEdit()
     })
 }
-
-const modalClose = document.querySelector('.modal__button--close').addEventListener('click', (e) => {
-    const modal = document.querySelector('.modal')
-    document.body.removeChild(modal)
-})
