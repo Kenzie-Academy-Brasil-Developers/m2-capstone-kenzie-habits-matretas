@@ -1,0 +1,226 @@
+:root{
+    --userNameBackground: #415AF3;
+}
+
+
+
+
+
+body{
+    /* font  */
+ 
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+header{
+    
+    height: 30.46vh;
+}
+
+
+.topUser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    /* height: 6vh; */
+    /* background-color: aqua; */
+}
+
+.topUser img{
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%;
+    border: 3px solid #415AF3;
+    margin: 9px 21px;
+    
+}
+
+.topUser p{
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    color: #415AF3;
+    font-weight: bold;
+    margin: 15px 20px;
+
+}
+
+.userName{
+    /* height: 24vh; */
+    height: 141px;
+    background-color: var(--userNameBackground) ;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.userName img{
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    border: 2px solid white;
+    margin: 16px 0px 0px 21px;
+}
+
+.userName strong{
+    
+    font-size:20px;
+    font-family: 'Inter';
+    font-weight: 600;
+    color: white;
+    margin: 34px 32px
+}
+
+
+
+
+
+/*--------- CONFIGURACOES DA MAIN -------*/
+
+
+
+/* ---------containerNavegation---------- */
+ /* main{
+     
+ } */
+
+.containerNavegation{
+     margin-top: 81px ;
+     /* background-color: aqua; */
+     display: flex;
+     flex-direction: column;
+    
+}
+
+/* .tasks{
+    
+} */
+.tasks strong{
+    font-family: 'Inter';
+    font-size: 20px;
+    /* font-style: normal; */
+    margin-left: 4%;
+    font-weight: bold;
+}
+.navigation{
+    margin-top: 34px ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigationTodos, .navigationConcluidos{
+    border: none;
+    /* outline: none; */
+}
+ 
+
+.navigationTodos, .navigationConcluidos, .navigationButton--criar{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.navigationButton--criar{
+    border: none;
+    background-color: #415AF3;
+    width: 90px;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+/* ---------containerNavegation---------- */
+
+
+
+
+
+/* ----------section 2 Affairs--------- */
+.containerAffairs{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    overflow-x: scroll;
+}
+.tableAffairs {
+    border: 2px solid #dfdbdb;
+    width: 90%;
+    
+}
+ 
+table,th,td{
+    border: 1px solid  #dfdbdb;
+    min-width:79px;
+    width: auto;
+    
+     
+    height: 49px;
+}
+
+.tableAffairs__tr {
+    /* border: 2px solid black; */
+
+     width: 80px;
+    /*height: 60px; */
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    color:#A1A1A1;
+    
+    /* padding:14px 12px; */
+
+}
+.tableAffairs--title{
+    width: 150px;
+}
+
+.tableAffairs--description{
+    width: 150px;
+}
+
+
+.tableAffairs__tr--data{
+    font-family: 'Inter';
+    font-weight: 500 ;
+}
+
+.tableAffairs__button--checkin button {
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(90, 131, 90);
+     
+    width: 17px;
+    height: 15px;
+    color: rgb(185, 199, 185);
+    margin: 0px 30px;
+     
+}
+
+ 
+
+.tableAffairs__edit--button{
+    border: none;
+    font-size: 32px;
+    margin: 8px 23px;
+    background-color: #FFFFFF;
+}
+
+.ex{
+    border: 2px solid #A1A1A1;
+    border-radius: 3px;
+     
+     
+    width: 17px;
+    height: 15px;
+    color: rgb(185, 199, 185);
+    margin: 0px 30px;
+}
+
+/* ----------section 2 Affairs--------- */
