@@ -95,6 +95,9 @@ class Api {
                 "Authorization": `Bearer ${this.token}`
             }
 
+        })
+    }
+
     static async createHabit(data) {
 
         return await fetch(`${this.base_url}/api/habits`, {

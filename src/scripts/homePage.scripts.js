@@ -58,5 +58,3 @@ class homePage {
 }
 
 homePage.main()
-
-Pages.renderAllHabits()
