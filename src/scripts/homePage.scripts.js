@@ -9,4 +9,4 @@ function chamarMenu (){
 
 btnNavMenu.addEventListener("click", chamarMenu)
 
-Pages.renderHabits()
+Pages.renderAllHabits()
