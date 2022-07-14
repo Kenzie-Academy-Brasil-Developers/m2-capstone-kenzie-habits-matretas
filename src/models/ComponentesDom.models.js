@@ -33,6 +33,14 @@ class ComponentesDom {
         modalFormInputTitle.name = "title"
         modalFormInputTitle.id = "title"
         modalFormInputTitle.placeholder = "Digitar título"
+        const modalDescriptionLabel = document.createElement('label')
+        modalDescriptionLabel.for = "description"
+        modalDescriptionLabel.innerText = "Descrição"
+        const modalDescriptionInput = document.createElement('input')
+        modalDescriptionInput.type = "text"
+        modalDescriptionInput.name = "description"
+        modalDescriptionInput.id = "description"
+        modalDescriptionInput.placeholder = "Digitar Descrição"
 
         const modalFormLabelCategory = document.createElement('label')
         modalFormLabelCategory.for = "category"
@@ -86,7 +94,7 @@ class ComponentesDom {
 
         divModalButtons.append(modalButtonsDelete, modalButtonsEdit)
 
-        modalForm.append(modalFormLabelTitle, modalFormInputTitle, modalFormLabelCategory, modalFormCategorySelect, divModalStatus, divModalButtons)
+        modalForm.append(modalFormLabelTitle, modalFormInputTitle, modalDescriptionLabel, modalDescriptionInput ,modalFormLabelCategory, modalFormCategorySelect, divModalStatus, divModalButtons)
 
 
         divModalInner.append(divModalTitle, modalForm)
@@ -101,8 +109,50 @@ class ComponentesDom {
         })
 
         const modalButtonDelete = document.querySelector('.modal__button--delete').addEventListener('click', (e) => {
-            console.log(id)
             this.modalConfirmExclusion(id)
+        })
+
+        
+        
+        const modalEditButton = divModal.children[0].children[0].children[1].children[7].children[1]
+        console.log(modalEditButton)
+        modalEditButton.addEventListener('click', async (e) => {
+
+            
+            
+            const form = divModal.children[0].children[0].children[1].children
+            console.log(form)
+            let tituloHabito
+            let descricao
+            let categoria
+
+            for(let i = 0; i < form.length; i++) {
+                if(i === 1) {
+                    tituloHabito = form[i].value
+                    
+                }
+                if(i === 3) {
+                    descricao = form[i].value
+                   
+                }
+
+                if(i === 5) {
+                    categoria = form[i].options[form[i].selectedIndex].text
+                    
+                }
+               
+                
+            }
+            console.log(tituloHabito)
+            let data = {
+                "habit_title" : tituloHabito,
+                "habit_description": descricao,
+                "habit_category": categoria
+            }
+
+            await Api.updateHabit(data, id)
+
+            location.reload()
         })
 
     }
@@ -164,9 +214,10 @@ class ComponentesDom {
 
         })
 
-        const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', (e) => {
+        const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', async (e) => {
 
-            Api.deleteHabit(id)
+            await Api.deleteHabit(id)
+            
 
             let modal = e.target.parentNode.parentNode.parentNode.parentNode
 
@@ -176,13 +227,7 @@ class ComponentesDom {
 
             document.body.removeChild(modal)
 
-
-            Pages.renderAllHabits()
             location.reload()
-
-
-
-
 
 
         })
