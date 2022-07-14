@@ -1,4 +1,5 @@
 import Api from "./Api.controller.js"
+import ComponentesDom from "../models/ComponentesDom.models.js";
 
 class Pages {
     static async renderAllHabits() {
@@ -13,7 +14,28 @@ class Pages {
             statusInput.type = "checkbox"
             statusInput.className = "ex"
             statusInput.checked = habit.habit_status
+            statusInput.id  = habit.habit_id;
+            statusInput.addEventListener("click", async (e) => {
+                console.log(e.target.id);
+                console.log(statusInput.checked);
+
+                const habitId = e.target.id;
+
+                const response = await Api.completeHabit(habitId);
+
+                if (response.message == "hábito concluído com sucesso" && statusInput.checked) {
+                    document.body.append(ComponentesDom.modalSuccess());
+                    const text = document.querySelector(".modal__warningText");
+                    text.innerText = `${response.message}`;
+
+                } else if(statusInput.checked == false){
+                    document.body.append(ComponentesDom.modalSuccess());
+                    const text = document.querySelector(".modal__warningText");
+                    text.innerText = "Hábito alterado para inconcluido.";
+                };
+            })
             status.appendChild(statusInput)
+            
             
             const title = document.createElement('td')
             title.innerText = habit.habit_title
