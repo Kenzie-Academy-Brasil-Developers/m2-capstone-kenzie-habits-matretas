@@ -15,6 +15,17 @@ btnNavMenu.addEventListener("click", chamarMenu)
 //FIM DO CODIGO MENU
 
 
+// BTN CREATE HABIT
+
+const btnCreate = document.querySelector(".navigationButton--criar")
+
+btnCreate.addEventListener('click', () => {
+    ComponentesDom.modalCreateHabit()
+})
+
+//------------------------------------------------------------------
+
+
 await Pages.renderAllHabits()
 
 const editBtns = document.getElementsByClassName("tableAffairs__edit--button")
