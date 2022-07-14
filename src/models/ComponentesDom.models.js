@@ -163,9 +163,10 @@ class ComponentesDom {
 
         })
 
-        const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', (e) => {
+        const modalConfirm = document.querySelector('.modal__button--red').addEventListener('click', async (e) => {
 
-            Api.deleteHabit(id)
+            await Api.deleteHabit(id)
+            
 
             let modal = e.target.parentNode.parentNode.parentNode.parentNode
 
@@ -175,13 +176,7 @@ class ComponentesDom {
 
             document.body.removeChild(modal)
 
-
-            Pages.renderAllHabits()
             location.reload()
-
-
-
-
 
 
         })

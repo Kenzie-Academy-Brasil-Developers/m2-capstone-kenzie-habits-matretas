@@ -27,6 +27,30 @@
   margin-top: 3rem;
 }
 
+.modal {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /* background-color: rgba(var(--color-black), 1); */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* font-family: var(--font-base); */
+  font-family: 'Inter';
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: inherit;
+  padding: 0.3rem;
+  margin-top: 3rem;
+}
+
 .modal__inner {
   width: 100%;
   background-color: rgba(var(--color-white), 1);
