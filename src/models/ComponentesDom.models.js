@@ -333,6 +333,22 @@ class ComponentesDom {
         buttonFormProfile.type = 'button'
         buttonFormProfile.classList.add('modal__button--save')
         buttonFormProfile.innerText = 'Salvar alterações'
+        buttonFormProfile.addEventListener("click", async () => {
+            const newImg = inputProfileImg.value;
+
+            const response = await Api.updateProfile(newImg);
+
+            if (response.message) {
+                document.body.append(this.modalFailure());
+                const text = document.querySelector(".modal__warningText");
+                text.innerText = `${response.message}`;
+
+            } else {
+                document.body.append(this.modalSuccess());
+                const text = document.querySelector(".modal__warningText");
+                text.innerText = `Imagem de Perfil Alterada com Sucesso!`;
+            };;
+        });
 
         divModalProfile.append(divContainerProfile)
         divContainerProfile.append(divInnerProfile)
