@@ -1,5 +1,6 @@
 import Api from "../controller/Api.controller.js"
 import Pages from "../controller/Pages.controller.js"
+import NewHabit from "./newHabit.models.js";
 
 class ComponentesDom {
     static async modalEdit(id) {
@@ -216,6 +217,18 @@ class ComponentesDom {
         modalFormInputTitle.id = "title"
         modalFormInputTitle.placeholder = "Digitar título"
 
+        const modalFormLabelDescription = document.createElement("label");
+        modalFormLabelDescription.for = "description";
+        modalFormLabelDescription.innerText = "Descrição";
+
+        const modalFormTextAreaDescription = document.createElement("textarea");
+        modalFormTextAreaDescription.name = "description";
+        modalFormTextAreaDescription.setAttribute("id", "description");
+        modalFormTextAreaDescription.cols = "30";
+        modalFormTextAreaDescription.rows = "3";
+        modalFormTextAreaDescription.placeholder = "Descreva o hábito...";
+
+
         const modalFormLabelCategory = document.createElement('label')
         modalFormLabelCategory.for = "category"
         modalFormLabelCategory.innerText = "Categoria"
@@ -247,8 +260,26 @@ class ComponentesDom {
         modalButtonsDelete.type = 'button'
         modalButtonsDelete.className = "modal__button modal__button--insert"
         modalButtonsDelete.innerText = "Inserir"
+        
+        modalButtonsDelete.addEventListener("click", async () => {
+            const habit = new NewHabit(modalFormInputTitle.value, modalFormTextAreaDescription.value, modalFormCategorySelect.value);
 
-        modalForm.append(modalFormLabelTitle, modalFormInputTitle, modalFormLabelCategory, modalFormCategorySelect, modalButtonsDelete)
+            const response =  habit.createNewHabit();
+
+            if (response.habit_id) {
+
+                document.body.append(this.modalSuccess());
+                const text = document.querySelector(".modal__warningText");
+                text.innerText = "Novo Hábito Criado Com Sucesso!"
+            
+            } else if (response.message) {
+                document.body.append(this.modalFailure());
+                const text = document.querySelector(".modal__warningText");
+                text.innerText = `${response.message}`;
+            };
+        })
+
+        modalForm.append(modalFormLabelTitle, modalFormInputTitle, modalFormLabelDescription, modalFormTextAreaDescription, modalFormLabelCategory, modalFormCategorySelect, modalButtonsDelete)
 
 
         divModalInner.append(divModalTitle, modalForm)
