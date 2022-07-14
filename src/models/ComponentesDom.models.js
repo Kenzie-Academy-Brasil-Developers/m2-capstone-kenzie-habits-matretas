@@ -433,8 +433,13 @@ class ComponentesDom {
         container.classList.add("container");
         modalInner.classList.add("modal__inner");
         modalTitle.classList.add("modal__title");
+        modalTitle.innerText = "Tudo OK :)";
         button.classList.add("modal__button--close");
         button.type = "button";
+        button.addEventListener("click", () => {
+            document.body.removeChild(div);
+        })
+        button.innerText = "X";
         p.classList.add("modal__warningText");
 
         modalTitle.append(h2, button);
@@ -462,6 +467,10 @@ class ComponentesDom {
         modalTitle.innerText = "Ops, ocorreu um erro :(";
         button.classList.add("modal__button--close");
         button.type = "button";
+        button.innerText = "X";
+        button.addEventListener("click", () => {
+            document.body.removeChild(div);
+        })
         p.classList.add("modal__warningText");
 
         modalTitle.append(h2, button);

@@ -94,8 +94,10 @@ class Api {
             headers: {
                 "Authorization": `Bearer ${this.token}`
             }
-
         })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
     }
 
     static async createHabit(data) {
