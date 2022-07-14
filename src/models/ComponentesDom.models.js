@@ -325,7 +325,60 @@ class ComponentesDom {
 
         btnFecharModal.addEventListener("click", chamarModalEditar)
 
-        }
+    }
+
+    static modalSuccess() {
+
+        const div = document.createElement("div");
+        const container = document.createElement("div");
+        const modalInner = document.createElement("div");
+        const modalTitle = document.createElement("div");
+        const h2 = document.createElement("h2");
+        const button = document.createElement("button");
+        const p = document.createElement("p");
+
+        div.classList.add("modal");
+        container.classList.add("container");
+        modalInner.classList.add("modal__inner");
+        modalTitle.classList.add("modal__title");
+        button.classList.add("modal__button--close");
+        button.type = "button";
+        p.classList.add("modal__warningText");
+
+        modalTitle.append(h2, button);
+        modalInner.append(modalTitle, p);
+        container.append(modalInner);
+        div.append(container);
+
+        return div;
+    };
+
+    static modalFailure() {
+        
+        const div = document.createElement("div");
+        const container = document.createElement("div");
+        const modalInner = document.createElement("div");
+        const modalTitle = document.createElement("div");
+        const h2 = document.createElement("h2");
+        const button = document.createElement("button");
+        const p = document.createElement("p");
+
+        div.classList.add("modal");
+        container.classList.add("container");
+        modalInner.classList.add("modal__inner");
+        modalTitle.classList.add("modal__title");
+        modalTitle.innerText = "Ops, ocorreu um erro :(";
+        button.classList.add("modal__button--close");
+        button.type = "button";
+        p.classList.add("modal__warningText");
+
+        modalTitle.append(h2, button);
+        modalInner.append(modalTitle, p);
+        container.append(modalInner);
+        div.append(container);
+
+        return div;
+    };
 }
 
 export default ComponentesDom
