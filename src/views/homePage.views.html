@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/homePage.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../../temp/css/style.css">
+    <title>Kenzie Habit</title>
+</head>
+<body>
+
+
+    <header>
+
+        <section class="topUser">
+            <p class="KenzieHabit">KenzieHabit</p>
+            <img id="img__user" src="../assets/img/useExemplo.jpg" alt="usuario">
+
+            <nav id="navMenu__menu">
+
+                <ul class="navMenu__ul">
+
+                    <li class="navMenu__li navMenu--liEditar">
+                        <button class="navMenu__button" id="navMenu__button--editar">Editar</button>
+                    </li>
+
+                    <li class="navMenu__li navMenu--liSair">
+                        <a href="../../index.html">
+                            <button class="navMenu__button navMenu__button--sair">Sair</button>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </section>
+
+        <section class="userName">
+        
+                <img src="../assets/img/useExemplo.jpg" alt="usuario">
+                <strong>Júlia Silva Camargo</strong>
+            
+        </section>
+    </header>
+    
+    <main>
+        <section class="containerNavegation">
+            <div class="tasks">
+                <strong>Tarefas</strong>
+                
+            </div>
+            <nav class="navigation">
+                <button class="navigationTodos">
+                    Todos
+                </button>
+
+                <button class="navigationConcluidos">
+                    Concluidos
+                </button>
+
+                <button class="navigationButton--criar">Criar</button>
+            </nav>
+        </section>
+
+        <section class="containerAffairs">
+            <table class="tableAffairs" >
+               
+                
+                <tr class="tableAffairs__tr">
+                    
+                    <th>Status</th>
+
+                    <th class="tableAffairs--title">Titulo
+
+                    </th>
+                    <!-- <th class="tableAffairs--description">
+                        Descrição
+
+                    </th> -->
+                    <!-- <th>
+                        Categoria
+                    </th> -->
+                     
+                    <th >
+                        
+                        Editar
+                    </th>
+                </tr>
+
+                
+            </table>
+        </section>
+
+
+    </main>
+    
+    <script type="module" src="../scripts/homePage.scripts.js"></script>
+</body>
+</html>
