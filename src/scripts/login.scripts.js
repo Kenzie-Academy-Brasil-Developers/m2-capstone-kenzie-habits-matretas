@@ -18,9 +18,7 @@ class Loginpage {
             const password = document.querySelector(".loginForm__input--password").value
             await Login.logar(user, password)
         
-            if (this.usr_name && this.token) {
-                window.location.href = `${this.filteredUrl}/src/views/homePage.views.html`
-            }
+            window.location.href = `${this.filteredUrl}/src/views/homePage.views.html`
 
         })
     }
