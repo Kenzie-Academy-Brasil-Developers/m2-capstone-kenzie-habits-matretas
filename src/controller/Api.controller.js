@@ -38,7 +38,7 @@ class Api {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${this.token}`
             },
-            body: JSON.parse(newData)
+            body: JSON.stringify(newData)
             
             })
             .then(res => res.json())
