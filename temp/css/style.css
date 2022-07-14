@@ -224,6 +224,25 @@
 .modal__buttons > .modal__button--delete,
 .modal__buttons > .modal__button--cancel {
   padding: 0.5rem 5rem;
+  background-color: #f11e1ecc;
+  color: white;
+}
+
+.modal__button--cancel {
+  background-color: #415AF3;
+  color: white;
+  border-radius: 6px;
+  width: 87px;
+  height: 27px;
+  margin-right: 4px;
+}
+
+.modal__button--red{
+  background-color: #f11e1ecc;
+  color: white;
+  border-radius: 6px;
+  width: 187px;
+  height: 27px
 }
 
 .modal__buttons > .modal__button--save {
