@@ -2,15 +2,42 @@
     display: flex;
     flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .pageLogin {
+        flex-direction: row;
+        box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        height: 485px;
+        width: 1080px;
+    }
+}
 
 .loginTitle {
     height: 80vmin;
     width: 100vmin;
 }
+@media screen and (min-width: 1200px) {
+    .loginTitle {
+        height: 485px;
+        width: 50%;
+    }
+}
 
 .loginTitle--habit {
     background: #4150D2;
     border-radius: 1px;
+}
+@media screen and (min-width: 1200px) {
+    .loginTitle--habit {
+        border-radius: 8px 0 0 8px;
+    }
 }
 
 .loginTitle__h3 {
@@ -22,6 +49,12 @@
     margin-bottom: 7vh;
     margin-left: 5vh;
 }
+@media screen and (min-width: 1200px) {
+    .loginTitle__h3 {
+        margin-top: 120px;
+        font-size: 28px;
+    }
+}
 
 .loginTitle__p--primary{
     font-family: 'Inter', sans-serif;
@@ -31,6 +64,16 @@
     color: #FFFFFF;
     line-height: 22px;
     margin-left: 5vh;
+}
+@media screen and (min-width: 1200px) {
+    .loginTitle__p--primary{
+        font-size: 24px;
+        margin-right: 50px;
+    }
+}
+
+.loginTitle__p--primary > span {
+    text-decoration: underline;
 }
 
 .loginTitle__p--secondary {
@@ -44,6 +87,11 @@
 
 .loginForm {
     background: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+    .loginForm {
+        margin: 30px 50px;
+    }
 }
 
 .loginForm__h3 {

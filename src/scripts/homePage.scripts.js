@@ -26,6 +26,22 @@ btnCreate.addEventListener('click', () => {
 //------------------------------------------------------------------
 
 
+// PROFILE PHOTO AND NAME
+
+const imgUser = document.querySelector("#img__user")
+const imgUser2 = document.querySelector("#img__user2")
+const getPhoto = localStorage.getItem("@kenzie-habits:usr_image")
+
+imgUser.src = getPhoto
+imgUser2.src = getPhoto
+
+const nameProfile = document.querySelector("#name__profile")
+const getName = localStorage.getItem("@kenzie-habits:usr_name")
+
+nameProfile.innerText = getName
+
+//------------------------------------------------------------------
+
 await Pages.renderAllHabits()
 
 const editBtns = document.getElementsByClassName("tableAffairs__edit--button")
